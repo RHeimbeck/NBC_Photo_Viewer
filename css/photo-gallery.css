@@ -1,0 +1,123 @@
+.container {
+    background-color: dodgerblue;
+    min-width: 390px;
+}
+
+.centered {
+    margin: auto auto;
+}
+
+.centeredText {
+    text-align: center;
+}
+
+.banner {
+    border-bottom: 1px dashed #ccc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.gallerySelector {
+    border-bottom: 1px dashed #ccc;
+}
+.gallerySelector input {
+    margin-left: 10px;
+}
+
+.imageError {
+    margin: auto auto;
+}
+
+#headline {
+    font-size: 24px;
+}
+
+#summary {
+    font-size: 16px;
+}
+
+.thumbImg {
+    width: 160px;
+    border: 2px solid black;
+}
+
+ul {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 24px;
+}
+
+ul li img {
+    cursor: pointer;
+}
+
+.modal {
+    min-width: 600px;
+}
+
+.modal-body {
+    padding: 5px !important;
+}
+
+.modal .close {
+    margin-right: 10px;
+}
+
+.modal-body-label {
+    height: auto;
+    margin-top: 5px;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-dialog img {
+    margin: 0 auto;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.modal .controls {
+    width: 50px;
+    display: block;
+    margin: auto 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal .backButton,
+.modal .fwdButton {
+    display: inline-block;
+    width: 8%;
+    vertical-align: top;
+}
+
+.modal .fwdButton {
+    text-align: right;
+}
+
+.modal .caption {
+    width: 82%;
+    padding: 5px;
+    font-size: 12px;
+    display: inline-block;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+@media screen and (min-width: 768px) {
+    .modal-dialog {
+        width: 600px;
+    }
+}
+
+@media screen and (min-width: 960px) {
+    .modal-dialog {
+        width: 800px;
+    }
+}

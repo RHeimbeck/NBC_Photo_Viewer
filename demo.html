@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Demo Photo Gallery Demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/photo-gallery.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/photo-gallery.js"></script>
+    <script type="text/javascript">
+        function imageLoadError(ctx){
+            ctx.outerHTML = '<div class="imageError">Image Not Found</div>';
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row banner">
+            <!-- Gallery Selector -->
+            <div class="gallerySelector">
+                <input type="radio" name="select" value="0" checked="checked"><label>&nbsp;Memorial Day</label>
+                <input type="radio" name="select" value="1" ><label>&nbsp;Space</label>
+                <input type="radio" name="select" value="2" ><label>&nbsp;Tony Awards</label>
+            </div>
+            <div id="headline" class="centeredText"></div>
+            <div id="summary" class="centeredText"></div>
+        </div>
+
+        <!-- Thumb image container - filled-in later by the code -->
+        <ul class="row gallery"></ul>
+    </div>
+
+    <!-- Whitebox modal dialog -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img onerror="imageLoadError(this);" />
+                    <div class="modal-body-label">
+                        <div class="backButton">
+                            <button type="button" class="btn btn-success previous">
+                                <span class="glyphicon glyphicon-backward"></span>
+                            </button>
+                        </div>
+
+                        <div class="caption"></div>
+
+                        <div class="fwdButton">
+                            <button type="button" class="btn btn-success next">
+                                <span class="glyphicon glyphicon-forward"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
